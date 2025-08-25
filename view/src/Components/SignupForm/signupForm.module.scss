@@ -1,0 +1,48 @@
+.signup {
+    width: 50%;
+    background-color: var(--color-bg);
+    border-radius: 12px;
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+    
+    input {
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #1f2a44;
+        background: var(--color-card);
+        color: var(--color-text);
+    }
+
+    h2 {
+        margin: 0 0 6px 0;
+    }
+
+    button {
+        margin-top: 6px;
+        background: var(--color-accent);
+        border: 0;
+        color: white;
+        padding: 10px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .error {
+        color: #ef4444;
+        margin: 6px 0 0 0;
+        font-size: 13px;
+    }
+    .switchBt {
+        margin-top: 12px;
+        cursor: pointer;
+        background-color: transparent;
+        color: #9ca3af;
+        border: 2px dashed #7381a0ff;
+        padding: 8px 12px;
+        border-radius: 0.5rem;
+        width: fit-content;
+        justify-self: center;
+    }
+
+}

@@ -1,0 +1,21 @@
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background-color: var(--color-panel);
+    border-bottom: 1px solid #0b1220;
+    h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+    button {
+        background-color: var(--color-accent);
+        border: 0;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+}

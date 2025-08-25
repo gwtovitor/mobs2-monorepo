@@ -1,0 +1,70 @@
+.tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+
+    .tab {
+        background: #101827;
+        border: 1px solid #1f2a44;
+        color: var(--color-muted);
+        padding: 6px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &.active {
+            background: #111a2f;
+            color: var(--color-text);
+        }
+    }
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8px;
+    align-items: center;
+    input {
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #1f2a44;
+        background: var(--color-card);
+        color: var(--color-text);
+    }
+
+    .error {
+        color: #ef4444;
+    }
+
+    .ok {
+        color: #10b981;
+    }
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+
+        .primary {
+            background: var(--color-accent);
+            border: 0;
+            color: white;
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &.danger {
+                background: #ef4444;
+            }
+        }
+    }
+}
+.primary {
+    background: var(--color-accent);
+    border: 0;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &.danger {
+        background: #ef4444;
+    }
+}

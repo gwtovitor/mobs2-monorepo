@@ -1,0 +1,15 @@
+node_modules/
+
+/server/dist/
+/server/build/
+/view/build/
+/view/dist/
+
+# Env
+.env
+.env.*
+!.env.example
+/server/.env
+/server/.env.*
+/view/.env
+/view/.env.*

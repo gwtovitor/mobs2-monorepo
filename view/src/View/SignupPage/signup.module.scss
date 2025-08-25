@@ -1,0 +1,15 @@
+.signup {
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    .switchBt {
+        margin-top: 12;
+        cursor: pointer;
+        background: transparent;
+        color: #9ca3af;
+        border: 2px dashed #7381a0ff;
+        padding: 8px 12px;
+        border-radius: 0.5rem;
+    }
+}
