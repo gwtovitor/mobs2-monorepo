@@ -6,7 +6,6 @@ export function useTelemetry(token) {
   const wsRef = useRef(null);
   const [connected, setConnected] = useState(false);
 
-  // state: last & history por placa
   const [lastByPlate, setLastByPlate] = useState(() => ({}));
   const [historyByPlate, setHistoryByPlate] = useState(() => ({}));
 
@@ -19,7 +18,6 @@ export function useTelemetry(token) {
 
     ws.onopen = () => {
       setConnected(true);
-      // por padrão: assinar todas
       ws.send(JSON.stringify({ type: 'subscribe' }));
     };
 
@@ -27,7 +25,7 @@ export function useTelemetry(token) {
       try {
         const msg = JSON.parse(ev.data);
         if (msg.type === 'telemetry') {
-          const p = msg.data; // { plate, lat, lng, speed, fuel, timestamp }
+          const p = msg.data;
           setLastByPlate((prev) => ({ ...prev, [p.plate]: p }));
           setHistoryByPlate((prev) => {
             const arr = prev[p.plate] ? [...prev[p.plate]] : [];

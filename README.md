@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS mobs.vehicle (
 
 ### 🖥️ Frontend (`/view`)
 ```bash
-cd ../view
+cd view
 yarn
 yarn dev    # http://localhost:5173
 ```

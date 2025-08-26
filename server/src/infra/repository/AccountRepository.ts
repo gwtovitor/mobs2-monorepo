@@ -4,7 +4,7 @@ import DatabaseConnection from '../database/DatabaseConnection';
 export default interface AccountRepository {
 	saveAccount(account: Account): Promise<void>;
 	getAccountById(accountId: string): Promise<Account>;
-	getAccountByEmail(email: string): Promise<Account | null>; // novo
+	getAccountByEmail(email: string): Promise<Account | null>; 
 }
 
 export class AccountRepositoryDatabase implements AccountRepository {
