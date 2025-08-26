@@ -41,13 +41,11 @@ yarn test:unit
 # somente integração
 yarn test:integration
 
-
-
+```
 - Unitários: entidades (Account, Vehicle), use cases (Signup, Login, Vehicles), TelemetrySimulator  
 - Integração: fluxo signup → login → CRUD veículos → WS recebendo telemetry  
 
 
-```
 ### 🗂️ Estrutura dos testes
 ```
 test/
@@ -65,7 +63,6 @@ cd server
 yarn
 yarn docker:start
 yarn dev
-yarn docker:stop  
 ```
 
 ### .env (server)
