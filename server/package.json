@@ -10,7 +10,7 @@
     "docker:db:kill": "docker rm -f postgres-db || true",
     "docker:stop": "docker compose stop",
     "docker:clean": "docker compose rm -fsv",
-    "coverage": "npx nyc --reporter=lcov --reporter=text ts-node src/signup.ts",
+   
     "test": "jest --config=jest.config.mjs",
     "test:unit": "jest --config=jest.unit.config.mjs",
     "test:integration": "jest --config=jest.integration.config.mjs"
