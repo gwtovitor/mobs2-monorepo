@@ -1,5 +1,7 @@
 # 🚗 MOBS2 — Painel de Veículos
 
+
+
 Aplicação **full-stack** para cadastro/autenticação de usuários, CRUD de veículos e telemetria simulada em tempo real no **Google Maps**.
 
 - **Server**: Node.js + TypeScript (Express, JWT, `ws`, PostgreSQL via `pg-promise`)  
@@ -8,6 +10,52 @@ Aplicação **full-stack** para cadastro/autenticação de usuários, CRUD de ve
 - **Docker**: DB (scripts `yarn docker:start`)  
 
 ---
+
+## 🚀 Live Demo
+
+https://mobs2.vercel.app/
+
+**Hospedagem**
+
+Front 💻: Vercel
+
+Back 🔙: Railway
+
+DB 🗂️: Neon
+
+
+##
+
+## 🧪 Testes (Jest + ts-jest, ESM)
+
+Este projeto usa **Jest** com **TypeScript** em **ESM**. A suíte está dividida entre **unit** e **integration**.
+
+### 📦 Scripts
+```bash
+# todos os testes (unit + integration)
+yarn test
+
+# somente unitários
+yarn test:unit
+
+# somente integração
+yarn test:integration
+
+
+
+- Unitários: entidades (Account, Vehicle), use cases (Signup, Login, Vehicles), TelemetrySimulator  
+- Integração: fluxo signup → login → CRUD veículos → WS recebendo telemetry  
+
+
+```
+### 🗂️ Estrutura dos testes
+```
+test/
+├─ unit/          # testes unitários
+│  └─ **/*.test.ts
+└─ integration/   # testes de integração
+   └─ **/*.test.ts
+```
 
 ## 🎯 Como rodar
 
@@ -252,13 +300,6 @@ Token ausente/inválido → close code `1008 (Policy Violation)`.
 - **Dashboard** → Sidebar (GET /vehicles), filtro por placa, status do WS  
 - **Modal CRUD** → Create/Update/Delete veículos  
 - **Mapa (Google Maps)** → abre WS, assina placas, plota histórico e última posição  
-
----
-
-## 🧪 Testes (server)
-
-- Unitários: entidades (Account, Vehicle), use cases (Signup, Login, Vehicles), TelemetrySimulator  
-- Integração: fluxo signup → login → CRUD veículos → WS recebendo telemetry  
 
 ---
 
