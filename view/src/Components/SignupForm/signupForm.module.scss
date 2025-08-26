@@ -5,7 +5,18 @@
     padding: 16px;
     display: grid;
     gap: 8px;
-    
+
+    .help {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-left: 8px;
+    }
+
+    .error {
+        color: #c62828;
+        margin-top: 8px;
+    }
+
     input {
         padding: 8px 10px;
         border-radius: 8px;
@@ -33,6 +44,7 @@
         margin: 6px 0 0 0;
         font-size: 13px;
     }
+
     .switchBt {
         margin-top: 12px;
         cursor: pointer;
