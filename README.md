@@ -17,7 +17,7 @@ cd server
 yarn
 yarn docker:start
 yarn dev
-yarn docker:stop  # derruba os serviços
+yarn docker:stop  
 ```
 
 ### .env (server)
@@ -80,12 +80,11 @@ REACT_APP_GOOGLE_MAPS_API_KEY=SEU_API_KEY
 │     └─ infra/               # http, ws, controllers, db, repositories, security, telemetry store
 └─ view/
    └─ src/
-      ├─ api/                 # clients REST (auth, vehicles)
+      ├─ services/            # clients REST (auth, vehicles)
       ├─ components/          # UI (Map, Lists, Modal CRUD)
-      ├─ context/             # AuthContext
+      ├─ context/             # AuthContext GoogleMapsProvider 
       ├─ hooks/               # useTelemetry (WebSocket)
-      ├─ maps/                # GoogleMapsProvider (useJsApiLoader)
-      └─ pages/               # Login, Signup, Dashboard
+      └─ view /               # Login, Signup, Dashboard
 ```
 
 ---
@@ -264,4 +263,4 @@ Token ausente/inválido → close code `1008 (Policy Violation)`.
 ---
 
 ## 📄 Licença
-MIT (ou a de sua preferência)
+MIT
