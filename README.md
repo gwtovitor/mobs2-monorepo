@@ -1,4 +1,4 @@
-# 🚗 MOBS2 — Painel de Veículos (Monorepo)
+# 🚗 MOBS2 — Painel de Veículos
 
 Aplicação **full-stack** para cadastro/autenticação de usuários, CRUD de veículos e telemetria simulada em tempo real no **Google Maps**.
 
