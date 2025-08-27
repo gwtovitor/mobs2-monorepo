@@ -32,6 +32,8 @@ Este projeto usa **Jest** com **TypeScript** em **ESM**. A suíte está dividida
 
 ### 📦 Scripts
 ```bash
+cd server
+
 # todos os testes (unit + integration)
 yarn test
 
