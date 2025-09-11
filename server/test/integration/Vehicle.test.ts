@@ -2,9 +2,8 @@ import CreateVehicle from '../../src/application/usecase/Veihcles/CreateVehicle'
 import DeleteVehicleByPlate from '../../src/application/usecase/Veihcles/DeleteVeihcleByPlate';
 import GetVehicleByPlate from '../../src/application/usecase/Veihcles/GetVehicleByPlate';
 import UpdateVehicleByPlate from '../../src/application/usecase/Veihcles/UpdateVehicleByPlate';
-import DatabaseConnection, {
-	PgPromiseAdapter,
-} from '../../src/infra/database/DatabaseConnection';
+import DatabaseConnection from '../../src/infra/database/DatabaseConnection';
+import { PgPromiseAdapter } from '../../src/infra/database/PGPromiseAdapter';
 import VehicleRepository, {
 	VehicleRepositoryDatabase,
 	VehicleRepositoryMemory,
@@ -17,14 +16,15 @@ let updateVehicle: UpdateVehicleByPlate;
 let deleteVehicle: DeleteVehicleByPlate;
 let connection: DatabaseConnection;
 
-beforeEach(() => {
+beforeAll(() => {
 	connection = new PgPromiseAdapter("postgres://postgres:123456@localhost:5432/app");
 	repo = new VehicleRepositoryDatabase(connection);
 	createVehicle = new CreateVehicle(repo);
 	getVehicle = new GetVehicleByPlate(repo);
 	updateVehicle = new UpdateVehicleByPlate(repo);
 	deleteVehicle = new DeleteVehicleByPlate(repo);
-});
+
+})
 
 test('Deve criar, buscar, atualizar e deletar um veículo pela placa', async () => {
 	await createVehicle.execute({
