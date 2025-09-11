@@ -4,7 +4,7 @@ dotenv.config()
 import { Server } from 'http';
 
 import { ExpressAdapter } from './infra/http/HttpServer';
-import { PgPromiseAdapter } from './infra/database/DatabaseConnection';
+import { PgPromiseAdapter } from "./infra/database/PGPromiseAdapter";
 
 import { JwtAdapter } from './infra/security/JwtAdapter';
 import { BcryptAdapter } from './infra/security/BcryptAdapter';
